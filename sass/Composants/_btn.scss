@@ -1,0 +1,17 @@
+.main__button {
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95em;
+    width: 62%;
+    height: 50px;
+    background: linear-gradient(#e872da ,#9356dc);
+    box-shadow: 0px 5px 20px rgb(196, 196, 196);
+    margin-bottom: 50px;  
+
+        &:hover{
+        background: linear-gradient(#eb7ede ,#9e69df);
+        box-shadow: 0px 5px 20px rgb(145, 145, 145);
+    }
+}

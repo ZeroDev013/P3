@@ -1,0 +1,19 @@
+{
+  "name": "writting-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/Layout/_menu.scss:./public/css/menu.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeroDev013/P3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZeroDev013/P3/issues"
+  },
+  "homepage": "https://github.com/ZeroDev013/P3#readme"
+}

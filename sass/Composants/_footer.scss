@@ -1,0 +1,41 @@
+/*FOOTER*/
+
+$color:white;
+
+.footer{
+    background-color: #353535;
+    width: 100%;
+}
+.footer__title{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: larger;
+    color: $color;
+    font-family: 'shrikhand', sans-serif;
+    font-weight: 100;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: $color;
+}
+.footer__contain{
+    display: flex;
+    align-items: center;
+}
+.fa-footer{
+    width: 8%;
+}
+.footer__texte__icone{
+    display: flex;
+    align-items: center;  
+}
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+}
+.footer p{
+    margin: 5px 0 5px 0;
+}
