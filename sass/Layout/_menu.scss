@@ -71,8 +71,9 @@ img.logo {
     margin-bottom: 50px;  
 
         &:hover{
-        background: linear-gradient(#eb7ede ,#9e69df);
+        background: linear-gradient(#e872da ,#9356dc);
         box-shadow: 0px 5px 20px rgb(145, 145, 145);
+        opacity: 0.8;
     }
 }
 
@@ -111,7 +112,7 @@ img.logo {
 .btn__circle {
     background-color: #9356dc;
     border-radius: 44px;
-    width: 30px;
+    width: 25px;
     display: flex;
     height: 25px;
     color: white;
@@ -121,6 +122,7 @@ img.logo {
     margin-right: 10px;
     margin-left: -15px;
     margin-top: 25px;
+    padding: 10px;
     z-index: 1;
 }
 .btn__content{
@@ -213,25 +215,26 @@ p.btn__text {
 .fa-heart{
     font-size: 1.5em;
 }
+/*color effect*/
 .fa-heart--color{
-    opacity: 0%;
+    opacity: 1;
     color: #9356dc;
 }
-.fa-heart--color:hover{
-    background:linear-gradient(#e872da ,#9356dc);
+.fa-heart--color:hover{  
     position: relative;
     z-index: 1;
-    transition: 800ms;
-    opacity: 100%;  
+    transition: 800ms;   
 }
-.fa-heart--uncolor{
+/*uncolor*/
+.fa-heart--uncolor:hover{
     opacity: 100%;
+    transition: 800ms;
+    background:linear-gradient(#e872da ,#9356dc);   
 }
 .fa-heart.fa-heart--uncolor {
-    position: absolute;
-    margin-top: -13px;
-    opacity: 100%;
+    opacity: 1;
 }
+
 .container__content__title {
     margin-top: 10px;
     margin-bottom: 5px;
@@ -256,29 +259,46 @@ $color:white;
     font-family: 'shrikhand', sans-serif;
     font-weight: 100;
 }
-.footer__container{
+.footer__list{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-bottom: 30px;
     color: $color;
-}
-.footer__contain{
+
+    &__icone {
     display: flex;
     align-items: center;
+    }
 }
-.fa-footer{
-    width: 8%;
+footer p{
+    margin: 5px 0 5px 0;
 }
-.footer__texte__icone{
+a.footer__link{
+    color: white;
+    text-decoration: none;
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
 .fa-solid, .fas {
     font-family: "Font Awesome 6 Free";
     font-weight: 600;
 }
-.footer p{
-    margin: 5px 0 5px 0;
+.fa footer{
+    padding: 10px;
 }
-
+i.fa-solid.fa-utensils.fa-footer {
+    margin-right: 15px;
+}
+i.fa-solid.fa-handshake-angle.fa-footer {
+    margin-right: 10px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    display: contents;
+    list-style-type: none;
+}
+li {
+    list-style-type: none;
+}
