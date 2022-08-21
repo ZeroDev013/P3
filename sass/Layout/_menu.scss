@@ -92,7 +92,7 @@ img.logo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 .btn__form{
     display: flex;
@@ -161,14 +161,16 @@ p.btn__text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 250px;
+    height: 1000px;
+    margin-bottom: 20px;
+
 }
 .restaurants__card{
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 230px;
+    height: 23%;
+    margin-bottom: 15px;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 5px 20px rgb(196, 196, 196);
@@ -195,7 +197,7 @@ p.btn__text {
     transform: translate(-50%, -50%);
     object-fit: cover; 
 }
-.new{
+.new[data-active=true]{
     background-color: #99e2d0;
     color: #008766;
     position: absolute;
@@ -212,29 +214,49 @@ p.btn__text {
     width: 80%;
     margin-left: 10px;
 }
+.icone {
+    display: flex;
+    width: 20%;
+}
 .fa-heart{
     font-size: 1.5em;
 }
-/*color effect*/
-.fa-heart--color{
-    opacity: 1;
-    color: #9356dc;
-}
-.fa-heart--color:hover{  
-    position: relative;
-    z-index: 1;
-    transition: 800ms;   
-}
-/*uncolor*/
 .fa-heart--uncolor:hover{
-    opacity: 100%;
-    transition: 800ms;
-    background:linear-gradient(#e872da ,#9356dc);   
+    opacity: 1;
+    transition: 800ms;  
 }
 .fa-heart.fa-heart--uncolor {
     opacity: 1;
 }
-
+.image__size {
+    width: 25px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 0px;
+    opacity: 0;
+    
+    &:hover{
+        opacity:1;
+        transition: 800ms;
+    }
+}
+.image__heart{
+    width: 100%;
+}
+.image__effect{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -13px;
+    background-color: white;
+    &:hover{  
+    margin-top: -60px;
+    transition: 800ms;
+    transform: scale(.05);
+    
+    } 
+}
 .container__content__title {
     margin-top: 10px;
     margin-bottom: 5px;
