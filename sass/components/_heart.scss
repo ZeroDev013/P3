@@ -1,0 +1,58 @@
+.restaurants__content {
+    display: flex;
+    align-items: center;
+
+    &__texte {
+        width: 80%;
+        margin-left: 10px;
+
+        &__title {
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+            &__texte {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+.restaurants__content__icone {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+
+    .fa-heart{
+        font-size: 1.5em;
+    }
+    &__wrap {
+    width: 25px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 0px;
+    opacity: 0;
+    
+        &:hover{
+            opacity:1;
+            transition: 800ms;
+        }
+
+        &__image{
+            width: 100%;
+        }
+   
+        &__effect{
+        width: 50px;
+        height: 40px;
+        position: absolute;
+        margin-top: -50px;
+        margin-left: -13px;
+        background-color: $color;
+
+            &:hover{  
+            margin-top: -60px;
+            transition: 800ms;
+            transform: scale(.05);
+            }  
+        }
+    }
+}
