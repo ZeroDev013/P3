@@ -265,7 +265,7 @@ img.logo {
   transition-duration: 200ms;
   color: #9356dc;
   background-color: #f5edff;
-  box-shadow: 0px 5px 20px rgb(145, 145, 145);
+  box-shadow: darken 0px 5px 20px rgb(196, 196, 196), 10; /*assombrissement*/
 }
 .btn__form {
   background-color: #9356dc;
@@ -534,15 +534,31 @@ img.logo {
 }
 
 .entry__cards__card {
+  width: 95%;
   display: flex;
   height: 65px;
   border-radius: 15px;
   background-color: white;
   margin: 10px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
+  overflow: hidden;
 }
-.entry__cards__card__texte { /*boutton action*/
-  width: 80%;
+.entry__cards__card:hover > .entry__cards__card__progress {
+  transform: translateX(0);
+  transition: 1000ms;
+  width: 20%;
+  color: white;
+}
+.entry__cards__card:hover > .entry__cards__card__progress .fa-circle-check {
+  color: white;
+  transform: rotate(360deg);
+  transition: transform 500ms;
+}
+.entry__cards__card__texte {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .entry__cards__card__texte__title {
   padding: 10px 10px 5px 10px;
@@ -555,26 +571,25 @@ img.logo {
   font-size: 0.9em;
 }
 
-.entry__cards__card__progress { /*conainer bar de progression*/
-  width: 20%;
+.entry__cards__card__progress {
+  width: 0%;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-}
-.entry__cards__card__progress__bar:hover { /*remplissage de la bar*/
   background-color: #99E2D0;
-  color: white;
-  transition: 1s;
-  transform: translate(-20px);
+  display: flex;
+  justify-content: center;
 }
 
 .price {
   padding: 20px 20px 10px 20px;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
-i.fa-solid.fa-circle-check {
-  padding: 20px;
+.fa-circle-check {
+  padding: 22px;
   font-size: 1.1em;
-  margin-top: 10px;
+  color: white;
 }
 
 .entry__card__icone {
