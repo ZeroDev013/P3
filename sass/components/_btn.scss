@@ -1,4 +1,11 @@
-.main__button {
+.button {
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__color {
     border-radius: 30px;
     border: none;
     color: white;
@@ -7,11 +14,12 @@
     width: 62%;
     height: 50px;
     background: linear-gradient(#e872da ,#9356dc);
-    box-shadow: 0px 5px 20px rgb(196, 196, 196);
+    box-shadow: $box-shadow;
     margin-bottom: 50px;  
 
         &:hover{
-        background: linear-gradient(#eb7ede ,#9e69df);
         box-shadow: 0px 5px 20px rgb(145, 145, 145);
+        opacity: 0.8;
+        }
     }
 }

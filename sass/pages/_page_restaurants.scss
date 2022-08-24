@@ -1,20 +1,19 @@
-/*HEADER*/
-body{
 
+/*HEADER*/
+
+.icone__return {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 0 20px;
 }
-img.logo {
-    width: 100%;
-    font-size: 10px;
-    padding-left: 25%;
-    padding-right: 25%;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    
+.fa-arrow-left{
+    color: black;
 }
 .main__menu{
     width: 100%;
-}
-.main__menu__content {
+
+    &__content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,74 +22,79 @@ img.logo {
     border-top-right-radius: 40px;
     margin-top: -50px;
 
-    &__title {
-    font-family: 'Shrikhand' , 'sans-serif'  ;
-    font-size: 1.6em;
-    margin: 40px 10px 25px 15px;
-    
+        &__title {
+        font-family: 'Shrikhand' , 'sans-serif'  ;
+        font-size: 1.6em;
+        margin: 40px 10px 25px 15px;
+        flex: 1;
+        }
     }
 }
+
+/*--MENU*/
 .image__menu{
     width: 100%;
 }
-.restaurants__content__icone__wrap__effect {
-    background-color: #f6f6f6;
-}
-.entry {
+.title {
     width: 100%;
     background-color:#f6f6f6 ;
     margin: 0;
 }
-.entry__title {
+.subtitle {
     padding: 10px 0px 3px 0px;
     margin: 0;
     width: 42px;
     border-bottom: $color-tertiary solid 3px;
     margin-left: 15px;
 }
-.entry__cards__card {
-    width: 95%;
-    display: flex;
-    height: 65px;
-    border-radius: 15px;
-    background-color: $color;
-    margin: 10px;
-    box-shadow: $box-shadow;
-    overflow: hidden;
+.cards{
+    height: 270px;
 
-    &:hover > &__progress {
-        transform: translateX(0); 
-        transition: 1000ms;
-        width: 20%;
-        color: $color; 
+        &__card {
+        width: 92%;
+        display: flex;
+        height: 70px;
+        border-radius: 15px;
+        background-color: $color;
+        margin: 15px;
+        box-shadow: $box-shadow;
+        overflow: hidden;
 
-       .fa-circle-check{
-           color: $color;
-           transform: rotate(360deg);
-           transition: transform 500ms;   
+        &:hover > &__progress {
+            transform: translateX(0); 
+            transition: 450ms ease-out;
+            width: 20%;
+            color: $color;
+            
+
+        .fa-circle-check{
+            color: $color;
+            transform: rotate(360deg);
+            transition: transform 500ms ease-out; 
+            }
         }
-    }
-    
-    &__texte {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+        
+        &__texte {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        &__title {
-        padding: 10px 10px 5px 10px;
-        margin: 0;
-        font-size: 1.1em;
-
-            &__subtitle {
-            padding: 0 10px 10px;
+            &__title {
+            padding: 10px 10px 5px 10px;
             margin: 0;
-            font-size: 0.9em;
+            font-size: 1.1em;
+
+                &__subtitle {
+                padding: 0 10px 10px;
+                margin: 0;
+                font-size: 0.9em;
+                }
             }
         }
     }
 }
-.entry__cards__card__progress {
+.cards__card__progress {
     width: 0%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
@@ -104,71 +108,11 @@ img.logo {
     font-weight: bold;
 }
 .fa-circle-check {
-    padding: 22px;
-    font-size: 1.1em;
+    padding: 26px;
+    font-size: 1.3em;
     color:$color;
-}
-.entry__card__icone {
-    color: $color;
-}
-/*FOOTER*/
 
-$color:white;
-
-.footer{
-    background-color: #353535;
-    width: 100%;
 }
-.footer__title{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: larger;
+.card__icone {
     color: $color;
-    font-family: 'shrikhand', sans-serif;
-    font-weight: 100;
-}
-.footer__list{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    color: $color;
-
-    &__icone {
-    display: flex;
-    align-items: center;
-    }
-}
-footer p{
-    margin: 5px 0 5px 0;
-}
-a.footer__link{
-    width: 200px;
-    color: $color;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-.fa-solid, .fas {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 600;
-}
-.fa footer{
-    padding: 15px;
-}
-.fa-footer {
-    margin-right: 15px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-    display: contents;
-    list-style-type: none;
-}
-li {
-    list-style-type: none;
-}
-a{
-    color: $color;
-    text-decoration: none;
 }

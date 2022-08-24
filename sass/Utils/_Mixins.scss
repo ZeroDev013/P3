@@ -1,0 +1,14 @@
+@mixin hoverHearth{
+    &:hover{  
+        margin-top: -60px;
+        transition: 800ms;
+        transform: scale(.05);
+        }
+}
+@mixin effect--color--value {
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -13px;
+}

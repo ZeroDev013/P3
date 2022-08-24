@@ -24,6 +24,7 @@
     .fa-heart{
         font-size: 1.5em;
     }
+
     &__wrap {
     width: 25px;
     position: absolute;
@@ -40,19 +41,17 @@
             width: 100%;
         }
    
-        &__effect{
-        width: 50px;
-        height: 40px;
-        position: absolute;
-        margin-top: -50px;
-        margin-left: -13px;
+        &__effect--colorA{
+        @include effect--color--value;
         background-color: $color;
-
-            &:hover{  
-            margin-top: -60px;
-            transition: 800ms;
-            transform: scale(.05);
-            }  
+        @include hoverHearth;
         }
+        
+        &__effect--colorB{  
+        @include effect--color--value;              
+        background-color: #f6f6f6;
+        @include hoverHearth;
+        }         
     }
 }
+
