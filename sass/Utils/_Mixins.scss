@@ -1,7 +1,7 @@
 @mixin hoverHearth{
     &:hover{  
         margin-top: -60px;
-        transition: 800ms;
+        transition: 600ms;
         transform: scale(.05);
         }
 }

@@ -25,10 +25,12 @@ body {
   background: linear-gradient(#e872da, #9356dc);
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .button__color:hover {
   box-shadow: 0px 5px 20px rgb(145, 145, 145);
-  opacity: 0.8;
+  opacity: 0.9;
+  transition: opacity 400ms;
 }
 
 .restaurants__content {
@@ -79,7 +81,7 @@ body {
 }
 .restaurants__content__icone__wrap__effect--colorA:hover {
   margin-top: -60px;
-  transition: 800ms;
+  transition: 600ms;
   transform: scale(0.05);
 }
 .restaurants__content__icone__wrap__effect--colorB {
@@ -92,7 +94,7 @@ body {
 }
 .restaurants__content__icone__wrap__effect--colorB:hover {
   margin-top: -60px;
-  transition: 800ms;
+  transition: 600ms;
   transform: scale(0.05);
 }
 
@@ -426,17 +428,52 @@ body {
   margin: 15px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   overflow: hidden;
+  cursor: pointer;
+}
+.cards__card--1, .cards__card--2, .cards__card--3 {
+  animation: card 500ms backwards;
+  animation-timing-function: ease-out;
+  transform-origin: center;
+}
+@keyframes card {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cards__card--1 {
+  animation-delay: 200ms;
+}
+.cards__card--2 {
+  animation-delay: 400ms;
+}
+.cards__card--3 {
+  animation-delay: 600ms;
+}
+.cards__card__progress {
+  width: 0%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 .cards__card:hover > .cards__card__progress {
-  transform: translateX(0);
-  transition: 450ms ease-out;
+  transition: 600ms ease;
   width: 20%;
-  color: white;
 }
 .cards__card:hover > .cards__card__progress .fa-circle-check {
+  transform: rotateZ(360deg);
+  transition: 500ms;
+  padding: 26px;
+  font-size: 1.3em;
+  padding: 26px;
+  font-size: 1.3em;
   color: white;
-  transform: rotate(360deg);
-  transition: transform 500ms ease-out;
 }
 .cards__card__texte {
   width: 90%;
@@ -455,19 +492,11 @@ body {
   font-size: 0.9em;
 }
 
-.cards__card__progress {
-  width: 0%;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-}
-
 .price {
   padding: 20px 20px 10px 20px;
   font-size: 0.9em;
   font-weight: bold;
+  flex: 1;
 }
 
 .fa-circle-check {

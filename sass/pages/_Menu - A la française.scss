@@ -59,18 +59,55 @@
         margin: 15px;
         box-shadow: $box-shadow;
         overflow: hidden;
+        cursor: pointer;      
+        
+        &--1, &--2, &--3 {
+        animation: card 500ms backwards;
+        animation-timing-function: ease-out;
+        transform-origin:  center ;
+        }
 
-        &:hover > &__progress {
-            transform: translateX(0); 
-            transition: 450ms ease-out;
+        @keyframes card {
+            0% {
+            transform: translateY(20px);
+            opacity: 0;   
+            }
+            100% {
+            opacity: 1; 
+            } 
+        }
+
+        $anim-delai: 200ms ;
+         @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: $anim-delai * $i;
+             }
+        }
+        
+    
+        
+        &__progress {
+            width: 0%;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: $color-tertiary;
+            display: flex;
+            justify-content: center;
+            color: $color;
+        }
+        
+        &:hover > &__progress { 
+            transition: 600ms ease;
             width: 20%;
-            color: $color;
-            
-
+ 
         .fa-circle-check{
-            color: $color;
-            transform: rotate(360deg);
-            transition: transform 500ms ease-out; 
+            transform: rotateZ(360deg);
+            transition: 500ms ;
+            padding: 26px;
+            font-size: 1.3em;
+            padding: 26px;
+            font-size: 1.3em;
+            color:$color;
             }
         }
         
@@ -94,18 +131,12 @@
         }
     }
 }
-.cards__card__progress {
-    width: 0%;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-    background-color: $color-tertiary;
-    display: flex;
-    justify-content: center;
-}
+
 .price {
     padding: 20px 20px 10px 20px;
     font-size: 0.9em;
     font-weight: bold;
+    flex: 1;
 }
 .fa-circle-check {
     padding: 26px;
