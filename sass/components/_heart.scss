@@ -33,8 +33,9 @@
     opacity: 0;
     
         &:hover{
-            opacity:1;
-            transition: 800ms;
+            opacity:1; 
+            transition: 200ms;
+            cursor: pointer;
         }
 
         &__image{
