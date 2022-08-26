@@ -1,4 +1,3 @@
-
 /*HEADER*/
 
 .icone__return {
@@ -12,6 +11,7 @@
 }
 .main__menu{
     width: 100%;
+    position: relative;
 
     &__content {
     width: 100%;
@@ -21,6 +21,7 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: -50px;
+    position: relative;
 
         &__title {
         font-family: 'Shrikhand' , 'sans-serif'  ;
@@ -32,8 +33,19 @@
 }
 
 /*--MENU*/
-.image__menu{
+.image__menu__wrap{
+    position: relative;
+    height: 250px;
     width: 100%;
+}
+.image__menu__wrap__image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 .title {
     width: 100%;
@@ -58,13 +70,12 @@
         background-color: $color;
         margin: 15px;
         box-shadow: $box-shadow;
-        overflow: hidden;
         cursor: pointer;      
         
         &--1, &--2, &--3 {
         animation: card 500ms backwards;
-        animation-timing-function: ease-out;
-        transform-origin:  center ;
+        animation-timing-function: linear;
+        transform-origin:  center;
         }
 
         @keyframes card {
@@ -94,6 +105,7 @@
             display: flex;
             justify-content: center;
             color: $color;
+            overflow: hidden;
         }
         
         &:hover > &__progress { 
@@ -101,11 +113,10 @@
             width: 20%;
  
         .fa-circle-check{
+            display: flex;
+            align-items: center;
             transform: rotateZ(360deg);
             transition: 500ms ;
-            padding: 26px;
-            font-size: 1.3em;
-            padding: 26px;
             font-size: 1.3em;
             color:$color;
             }
@@ -116,16 +127,24 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        overflow: hidden;
 
-            &__title {
+            &__title { /*h3*/
             padding: 10px 10px 5px 10px;
             margin: 0;
             font-size: 1.1em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
 
-                &__subtitle {
+                &__subtitle {/*p*/
                 padding: 0 10px 10px;
                 margin: 0;
                 font-size: 0.9em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
                 }
             }
         }
@@ -133,10 +152,12 @@
 }
 
 .price {
-    padding: 20px 20px 10px 20px;
+    padding-right:20px;
     font-size: 0.9em;
     font-weight: bold;
     flex: 1;
+    display: flex;
+    align-items: flex-end;
 }
 .fa-circle-check {
     padding: 26px;
@@ -147,3 +168,11 @@
 .card__icone {
     color: $color;
 }
+
+/*--MEDIA QUERIES MENU--*/
+
+@media (min-width: 777px){
+
+@include mediaQuerry--menu;
+
+    }

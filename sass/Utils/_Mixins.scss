@@ -1,3 +1,4 @@
+/*HEARTH*/
 @mixin hoverHearth{
     &:hover{  
         margin-top: -60px;
@@ -11,4 +12,81 @@
     position: absolute;
     margin-top: -50px;
     margin-left: -13px;
+}
+/*--MEDIA QUERIES MENU--*/
+@mixin mediaQuerry--menu{
+
+    .button {
+        padding-top: 40px;
+    }
+              
+    .cards{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        
+        &__card{
+            height: 150px;
+
+            &__texte__title__subtitle {
+                white-space: break-spaces;
+            }  
+
+            &__texte__title {
+                white-space: break-spaces;
+            }
+            .price{
+                align-items: center;
+            }           
+        }
+    }       
+}
+/*--MEDIA QUERIES STYLE 777px--*/
+@mixin mediaQuerry--style--777{
+
+    h2.fonctioning__title {
+        margin-top: 15px;
+    }
+    .btn__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .btn{
+        margin: 20px;
+    }
+    .btn__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    .restaurants__cards {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a.restaurants__cards__card {
+        margin: 10px;
+        height: 200px;
+        width: 47%;
+    }
+    .restaurants__title {
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .button{
+        padding-top: 20px;
+    }
+}
+/*--MEDIA QUERIES STYLE 992px--*/
+@mixin mediaQuerry--style--992{
+
+    .restaurants__cards__card__image__wrap {
+        height: 90%;
+    }
 }

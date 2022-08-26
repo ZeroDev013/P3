@@ -1,3 +1,7 @@
+/*HEARTH*/
+/*--MEDIA QUERIES MENU--*/
+/*--MEDIA QUERIES STYLE 777px--*/
+/*--MEDIA QUERIES STYLE 992px--*/
 * {
   box-sizing: border-box;
 }
@@ -7,6 +11,7 @@ body {
   font-family: "Shrikhand", "sans-serif";
 }
 
+/*--BUTTON--*/
 .button {
   width: 100%;
   background-color: #f6f6f6;
@@ -329,7 +334,6 @@ body {
   height: 70%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  overflow: hidden;
 }
 .restaurants__cards__card__image__wrap__image {
   width: 100%;
@@ -366,6 +370,53 @@ body {
   margin-top: 0px;
 }
 
+/*--MEDIA QUERIES STYLE 777px--*/
+@media (min-width: 777px) {
+  h2.fonctioning__title {
+    margin-top: 15px;
+  }
+  .btn__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .btn {
+    margin: 20px;
+  }
+  .btn__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .restaurants__cards {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  a.restaurants__cards__card {
+    margin: 10px;
+    height: 200px;
+    width: 47%;
+  }
+  .restaurants__title {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  .button {
+    padding-top: 20px;
+  }
+}
+/*--MEDIA QUERIES STYLE 992px--*/
+@media (min-width: 992px) {
+  .restaurants__cards__card__image__wrap {
+    height: 90%;
+  }
+}
 /*HEADER*/
 .icone__return {
   display: flex;
@@ -380,6 +431,7 @@ body {
 
 .main__menu {
   width: 100%;
+  position: relative;
 }
 .main__menu__content {
   width: 100%;
@@ -389,6 +441,7 @@ body {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -50px;
+  position: relative;
 }
 .main__menu__content__title {
   font-family: "Shrikhand", "sans-serif";
@@ -398,8 +451,20 @@ body {
 }
 
 /*--MENU*/
-.image__menu {
+.image__menu__wrap {
+  position: relative;
+  height: 250px;
   width: 100%;
+}
+
+.image__menu__wrap__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .title {
@@ -427,12 +492,11 @@ body {
   background-color: white;
   margin: 15px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
-  overflow: hidden;
   cursor: pointer;
 }
 .cards__card--1, .cards__card--2, .cards__card--3 {
   animation: card 500ms backwards;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
   transform-origin: center;
 }
 @keyframes card {
@@ -461,17 +525,17 @@ body {
   display: flex;
   justify-content: center;
   color: white;
+  overflow: hidden;
 }
 .cards__card:hover > .cards__card__progress {
   transition: 600ms ease;
   width: 20%;
 }
 .cards__card:hover > .cards__card__progress .fa-circle-check {
+  display: flex;
+  align-items: center;
   transform: rotateZ(360deg);
   transition: 500ms;
-  padding: 26px;
-  font-size: 1.3em;
-  padding: 26px;
   font-size: 1.3em;
   color: white;
 }
@@ -480,23 +544,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
-.cards__card__texte__title {
+.cards__card__texte__title { /*h3*/
   padding: 10px 10px 5px 10px;
   margin: 0;
   font-size: 1.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.cards__card__texte__title__subtitle {
+.cards__card__texte__title__subtitle { /*p*/
   padding: 0 10px 10px;
   margin: 0;
   font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .price {
-  padding: 20px 20px 10px 20px;
+  padding-right: 20px;
   font-size: 0.9em;
   font-weight: bold;
   flex: 1;
+  display: flex;
+  align-items: flex-end;
 }
 
 .fa-circle-check {
@@ -507,4 +580,28 @@ body {
 
 .card__icone {
   color: white;
+}
+
+/*--MEDIA QUERIES MENU--*/
+@media (min-width: 777px) {
+  .button {
+    padding-top: 40px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .cards__card {
+    height: 150px;
+  }
+  .cards__card__texte__title__subtitle {
+    white-space: break-spaces;
+  }
+  .cards__card__texte__title {
+    white-space: break-spaces;
+  }
+  .cards__card .price {
+    align-items: center;
+  }
 }

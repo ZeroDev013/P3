@@ -156,7 +156,6 @@ body
         height: 70%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        overflow: hidden;
 
         &__image{
         width: 100%;
@@ -196,4 +195,19 @@ body
             }
         }
     }
+}
+
+/*--MEDIA QUERIES STYLE 777px--*/
+
+@media (min-width: 777px){
+    
+    @include mediaQuerry--style--777;
+}
+
+/*--MEDIA QUERIES STYLE 992px--*/
+
+@media (min-width: 992px){
+
+    @include mediaQuerry--style--992;
+
 }
