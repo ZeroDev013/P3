@@ -17,31 +17,19 @@
 }
 /*--MEDIA QUERIES MENU--*/
 @mixin mediaQuerry--menu{
-       
-    .cards{
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        
-        &__card{
-            height: 150px;
 
-            &__texte__title__subtitle {
-                white-space: break-spaces;
-            }  
-
-            &__texte__title {
-                white-space: break-spaces;
-            }
-            .price{
-                align-items: center;
-            }           
-        }
-    }       
 }
 /*--MEDIA QUERIES STYLE 777px--*/
 @mixin mediaQuerry--style--777{
 
+    .container__section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;     
+    } 
+    .title {
+        flex: 1;
+    } 
     h2.fonctioning__title {
         margin-top: 15px;
         margin-bottom: 0px;
@@ -64,8 +52,7 @@
     .restaurants__cards {
         display: flex;
         flex-direction: row;
-        height: 430px;
-        margin-bottom: 50px;
+        height: 480px;
         flex-wrap: wrap;
         justify-content: space-around;
     }
