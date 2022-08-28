@@ -5,8 +5,7 @@ $color:white;
 .footer{
     background-color: #353535;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 10px;
 }
 .footer__title{
     font-size: larger;
@@ -14,13 +13,12 @@ $color:white;
     font-family: 'shrikhand', sans-serif;
     font-weight: 100;
     margin: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
 }
 .footer__list{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    padding: 10px;
     color: $color;
 
     &__icone {
