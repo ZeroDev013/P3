@@ -65,7 +65,7 @@
 
     //placement container bottom
     .container__bottom{
-        background: linear-gradient(#e872da ,#9356dc);
+        background: linear-gradient( #9356dc,#e872da);
         border-top: 2px solid black;
         position: absolute;
         width: 100%;
@@ -121,7 +121,6 @@
     filter: brightness(1.5);
     border-top: 5px solid $color-secondary;
     border-bottom: 5px solid $color-primary;
-    border-radius: 50%;
     border-radius: 50%;
     width: 100px;
     height: 100px;

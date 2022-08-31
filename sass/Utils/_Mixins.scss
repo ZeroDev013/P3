@@ -7,7 +7,7 @@
         cursor: pointer;
         }
 }
-@mixin effect--color--value {
+@mixin effect--color--value{
     width: 50px;
     height: 40px;
     position: absolute;
@@ -15,5 +15,8 @@
     margin-left: -12px;
     z-index: 1;
 }
-
-
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
