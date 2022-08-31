@@ -25,9 +25,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-   .container__main{
+    .container__main{
     padding-bottom: 0;
-   }
+    }
     .restaurants__title{
         padding-top: 10px;
     }
@@ -90,7 +90,7 @@
 /*--LOADER--*/
 @mixin loader{
 
-.container{ 
+.loader{ 
 
     //container
     opacity: 0;
