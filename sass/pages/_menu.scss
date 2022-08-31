@@ -108,10 +108,11 @@
             justify-content: center;
             color: $color;
             overflow: hidden;
+            transition: width 600ms ease;
         }
         //deplacement du conteneur icone vers la gauche
         &:hover > &__progress { 
-            transition: 600ms ease;
+            
             width: 25%;
 
             .fa-circle-check{

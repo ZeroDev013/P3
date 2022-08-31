@@ -277,6 +277,7 @@ a {
   position: absolute;
   top: 44%;
   font-family: "Roboto", "sans-serif";
+  z-index: 2;
   filter: drop-shadow(4px -1px 2px white);
   animation: translate 500ms ease-in;
   position: absolute;
@@ -292,7 +293,7 @@ a {
   }
 }
 
-.container__loader {
+.circle__central {
   border: 5px solid black;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   filter: brightness(1.5);
@@ -317,7 +318,7 @@ a {
     opacity: 1;
   }
 }
-.container__circle__circle {
+.circle__exterieur {
   border: 10px solid #FF79DA;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   filter: brightness(1.5);
@@ -689,9 +690,9 @@ body {
   justify-content: center;
   color: white;
   overflow: hidden;
+  transition: width 600ms ease;
 }
 .cards__card:hover > .cards__card__progress {
-  transition: 600ms ease;
   width: 25%;
 }
 .cards__card:hover > .cards__card__progress .fa-circle-check {
