@@ -111,8 +111,7 @@
             transition: width 600ms ease;
         }
         //deplacement du conteneur icone vers la gauche
-        &:hover > &__progress { 
-            
+        &:hover > &__progress {   
             width: 25%;
 
             .fa-circle-check{
@@ -172,12 +171,18 @@
     color: $color;
 }
 
-/*--MEDIA QUERIES MENU--*/
-
-@media (min-width: 777px){
-@include mediaQuerry--menu--777;
-    }
-
+/*--MEDIA QUERIES MENU 992px--*/
 @media (min-width: 992px){
-@include mediaQuerry--menu--992; 
+
+    .header{
+        width: 27%;
+        margin-left: auto;
+        margin-right: auto;
     }
+    .container__main{
+    padding-bottom: 0;
+    }
+    .restaurants__title{
+        padding-top: 10px;
+    }
+}
