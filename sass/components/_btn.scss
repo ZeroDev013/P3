@@ -1,10 +1,11 @@
 /*--BUTTON--*/
 .button {
     width: 100%;
-    background-color: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f6f6f6;
+    padding: 25px;
     
     &__color {
     border-radius: 30px;
@@ -16,12 +17,13 @@
     height: 50px;
     background: linear-gradient(#e872da ,#9356dc);
     box-shadow: $box-shadow;
-    margin-bottom: 50px;
+//    margin-bottom: 50px;
     cursor: pointer;  
 
         &:hover{
         box-shadow: 0px 5px 20px rgb(145, 145, 145);
         filter: brightness(1.1);
+
         }
     }
 }
