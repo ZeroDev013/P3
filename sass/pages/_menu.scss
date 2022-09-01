@@ -27,7 +27,7 @@
 
         &__title {
         font-family: 'Shrikhand' , 'sans-serif'  ;
-        font-size: 1.6em;
+        font-size: map-get($font-size-menu, headertitle);
         padding: 15px;
         flex: 1;
         }
@@ -69,8 +69,8 @@
             background-color: $color;
             margin: 15px;
             box-shadow: $box-shadow;
-            cursor: pointer;
             transition: transform 2s; 
+            overflow: hidden;
 
         &--1, &--2, &--3, &--4{
             animation: translate 500ms backwards; // attribut l'animation translation a chaque card avec un retard 
@@ -99,29 +99,36 @@
             }
         }
         
-        &__progress {
-            width: 0%;
+        &__progress {  
+            width: 0;
             border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
-            background-color: $color-tertiary;
+            border-top-right-radius: 15px;  
             display: flex;
             justify-content: center;
+            align-items: center;
             color: $color;
             overflow: hidden;
-            transition: width 600ms ease;
+            background-color: $color-tertiary;
+            transition: width 600ms ease;  
         }
+
+        &__icone{
+            padding: 26px;
+            color:$color;
+            font-size: map-get($font-size-menu, facircle);
+            transition: 500ms;
+        }
+
         //deplacement du conteneur icone vers la gauche
-        &:hover > &__progress {   
+        &:hover > &__progress { 
             width: 25%;
 
-            .fa-circle-check{
-                display: flex;
-                align-items: center;
-                transform: rotateZ(360deg);
-                transition: 500ms ;
-                font-size: 1.3em;
-                color:$color;
-            }
+        //rotation de l'icone    
+            span{
+                display: inline-block;
+                transform: rotate(360deg);
+                transition: 600ms;
+            }                  
         }
         
         &__texte {
@@ -134,13 +141,13 @@
             &__title { /*h3*/
                 padding: 10px 10px 5px 10px;
                 margin: 0;
-                font-size: 1.1em;
+                font-size: map-get($font-size-menu, menutitle);
                 @include ellipsis;
 
                 &__subtitle {/*p*/
                     padding: 0 10px 10px;
                     margin: 0;
-                    font-size: 0.9em;
+                    font-size: map-get($font-size-menu, menusubtitle);
                     @include ellipsis;
                 }
             }
@@ -150,20 +157,24 @@
 
 .price {
     padding-right:20px;
-    font-size: 0.9em;
+    font-size: map-get($font-size-menu, price);
     font-weight: bold;
     flex: 1;
     display: flex;
     align-items: flex-end;
 }
-.fa-circle-check {
-    padding: 26px;
-    font-size: 1.3em;
-    color:$color;
 
-}
 .card__icone {
     color: $color;
+}
+/*--MEDIA QUERIES MENU 777px--*/
+
+@media (min-width: 777px){
+
+    .title {
+        flex: 1;
+        width: 30%;
+    } 
 }
 
 /*--MEDIA QUERIES MENU 992px--*/

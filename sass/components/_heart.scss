@@ -19,7 +19,7 @@
 .restaurants__content__icone {
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 30%;
 
     .fa-heart{
         font-size: 1.5em;
@@ -31,26 +31,28 @@
     margin-top: -5px;
     margin-left: 0px;
     opacity: 0;
-    
+    transition: 100ms linear;
+
         &:hover{
             opacity:1; 
-            transition: 200ms;
             cursor: pointer;
         }
 
         &__image{
             width: 100%;
         }
+        
         //color progression heart white
         &__effect--colorA{ 
-        @include effect--color--value;
-        @include hoverHearth;
+        @include value-heart;
+        @include hover-heart;
         background-color: $color; 
         }
+
         //color progression heart grey
         &__effect--colorB{  
-        @include effect--color--value;              
-        @include hoverHearth;
+        @include value-heart;              
+        @include hover-heart;
         background-color: #f6f6f6;
         } 
 

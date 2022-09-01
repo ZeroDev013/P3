@@ -17,6 +17,7 @@
     height: 50px;
     background: linear-gradient(#e872da ,#9356dc);
     box-shadow: $box-shadow;
+    transition: box-shadow 600ms, filter 600ms;
 
     cursor: pointer;  
 

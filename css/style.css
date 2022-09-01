@@ -1,4 +1,4 @@
-/*HEARTH*/
+/*HEART*/
 * {
   box-sizing: border-box;
 }
@@ -27,6 +27,7 @@ body {
   height: 50px;
   background: linear-gradient(#e872da, #9356dc);
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
+  transition: box-shadow 600ms, filter 600ms;
   cursor: pointer;
 }
 .button__color:hover {
@@ -53,7 +54,7 @@ body {
 .restaurants__content__icone {
   display: flex;
   justify-content: center;
-  width: 20%;
+  width: 30%;
 }
 .restaurants__content__icone .fa-heart {
   font-size: 1.5em;
@@ -64,10 +65,10 @@ body {
   margin-top: -5px;
   margin-left: 0px;
   opacity: 0;
+  transition: 100ms linear;
 }
 .restaurants__content__icone__wrap:hover {
   opacity: 1;
-  transition: 200ms;
   cursor: pointer;
 }
 .restaurants__content__icone__wrap__image {
@@ -79,13 +80,12 @@ body {
   position: absolute;
   margin-top: -50px;
   margin-left: -12px;
-  z-index: 1;
   background-color: white;
 }
 .restaurants__content__icone__wrap__effect--colorA:hover {
   margin-top: -60px;
   transition: 1000ms;
-  transform: scale(0.05);
+  transform: scale(0.3);
   cursor: pointer;
 }
 .restaurants__content__icone__wrap__effect--colorB {
@@ -94,13 +94,12 @@ body {
   position: absolute;
   margin-top: -50px;
   margin-left: -12px;
-  z-index: 1;
   background-color: #f6f6f6;
 }
 .restaurants__content__icone__wrap__effect--colorB:hover {
   margin-top: -60px;
   transition: 1000ms;
-  transform: scale(0.05);
+  transform: scale(0.3);
   cursor: pointer;
 }
 
@@ -353,7 +352,7 @@ body {
   border-top: solid 4px rgba(202, 202, 202, 0.4588235294);
 }
 .location__icone {
-  font-size: 0.8em;
+  font-size: 1em;
   margin-right: 20px;
 }
 .location__texte {
@@ -380,9 +379,6 @@ body {
 }
 
 /*FONCTIONING*/
-.fonctioning {
-  width: 100%;
-}
 .fonctioning__title {
   margin-left: 20px;
   margin-top: 40px;
@@ -420,12 +416,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
   margin-right: 10px;
   margin-left: -15px;
   padding: 10px;
-  z-index: 1;
-  opacity: 1;
 }
 .btn__form__content {
   display: flex;
@@ -470,6 +463,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   color: black;
+  transition: box-shadow 600ms;
 }
 .restaurants__cards__card:hover {
   cursor: pointer;
@@ -496,7 +490,7 @@ body {
   color: #008766;
   position: absolute;
   margin-left: 72%;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 600;
   padding: 5px 10px 5px 10px;
 }
@@ -523,9 +517,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .title {
-    flex: 1;
   }
   h2.fonctioning__title {
     margin-top: 15px;
@@ -643,8 +634,8 @@ body {
   background-color: white;
   margin: 15px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
-  cursor: pointer;
   transition: transform 2s;
+  overflow: hidden;
 }
 .cards__card--1, .cards__card--2, .cards__card--3, .cards__card--4 {
   animation: translate 500ms backwards;
@@ -675,26 +666,30 @@ body {
   animation-delay: 800ms;
 }
 .cards__card__progress {
-  width: 0%;
+  width: 0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: #99E2D0;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
   overflow: hidden;
+  background-color: #99E2D0;
   transition: width 600ms ease;
+}
+.cards__card__icone {
+  padding: 26px;
+  color: white;
+  font-size: 1.3em;
+  transition: 500ms;
 }
 .cards__card:hover > .cards__card__progress {
   width: 25%;
 }
-.cards__card:hover > .cards__card__progress .fa-circle-check {
-  display: flex;
-  align-items: center;
-  transform: rotateZ(360deg);
-  transition: 500ms;
-  font-size: 1.3em;
-  color: white;
+.cards__card:hover > .cards__card__progress span {
+  display: inline-block;
+  transform: rotate(360deg);
+  transition: 600ms;
 }
 .cards__card__texte {
   width: 90%;
@@ -729,16 +724,17 @@ body {
   align-items: flex-end;
 }
 
-.fa-circle-check {
-  padding: 26px;
-  font-size: 1.3em;
-  color: white;
-}
-
 .card__icone {
   color: white;
 }
 
+/*--MEDIA QUERIES MENU 777px--*/
+@media (min-width: 777px) {
+  .title {
+    flex: 1;
+    width: 30%;
+  }
+}
 /*--MEDIA QUERIES MENU 992px--*/
 @media (min-width: 992px) {
   .header {
