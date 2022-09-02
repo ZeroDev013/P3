@@ -1,25 +1,7 @@
-.restaurants__content {
-    display: flex;
-    align-items: center;
-
-    &__texte {
-        width: 80%;
-        margin-left: 10px;
-
-        &__title {
-            margin-top: 10px;
-            margin-bottom: 5px;
-
-            &__texte {
-                margin-top: 0px;
-            }
-        }
-    }
-}
 .restaurants__content__icone {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 26%;
 
     .fa-heart{
         font-size: 1.5em;
@@ -31,7 +13,7 @@
     margin-top: -5px;
     margin-left: 0px;
     opacity: 0;
-    transition: 100ms linear;
+    transition: opacity 500ms ease-out;
 
         &:hover{
             opacity:1; 
@@ -42,14 +24,14 @@
             width: 100%;
         }
         
-        //color progression heart white
+        //effet color progression heart white
         &__effect--colorA{ 
         @include value-heart;
         @include hover-heart;
         background-color: $color; 
         }
 
-        //color progression heart grey
+        //effet color progression heart grey
         &__effect--colorB{  
         @include value-heart;              
         @include hover-heart;

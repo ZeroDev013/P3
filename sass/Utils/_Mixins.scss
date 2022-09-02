@@ -2,7 +2,6 @@
 @mixin hover-heart{
     &:hover{  
     margin-top: -60px;
-    transition: 1000ms;
     transform: scale(.3);
     cursor: pointer;
     }
@@ -13,11 +12,13 @@
     position: absolute;
     margin-top: -50px;
     margin-left: -12px;
+    margin-top: -50px;
+    margin-left: -12px;
+    transition: 600ms;
 }
+/*   */
 @mixin ellipsis{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-    
+}  

@@ -1,4 +1,5 @@
 /*HEART*/
+/*   */
 * {
   box-sizing: border-box;
 }
@@ -27,34 +28,18 @@ body {
   height: 50px;
   background: linear-gradient(#e872da, #9356dc);
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
-  transition: box-shadow 600ms, filter 600ms;
+  transition: box-shadow 300ms, filter 500ms;
   cursor: pointer;
 }
 .button__color:hover {
-  box-shadow: 0px 5px 20px rgb(145, 145, 145);
+  box-shadow: 0px 5px 10px rgb(51, 51, 51);
   filter: brightness(1.1);
-}
-
-.restaurants__content {
-  display: flex;
-  align-items: center;
-}
-.restaurants__content__texte {
-  width: 80%;
-  margin-left: 10px;
-}
-.restaurants__content__texte__title {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.restaurants__content__texte__title__texte {
-  margin-top: 0px;
 }
 
 .restaurants__content__icone {
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 26%;
 }
 .restaurants__content__icone .fa-heart {
   font-size: 1.5em;
@@ -65,7 +50,7 @@ body {
   margin-top: -5px;
   margin-left: 0px;
   opacity: 0;
-  transition: 100ms linear;
+  transition: opacity 500ms ease-out;
 }
 .restaurants__content__icone__wrap:hover {
   opacity: 1;
@@ -80,11 +65,13 @@ body {
   position: absolute;
   margin-top: -50px;
   margin-left: -12px;
+  margin-top: -50px;
+  margin-left: -12px;
+  transition: 600ms;
   background-color: white;
 }
 .restaurants__content__icone__wrap__effect--colorA:hover {
   margin-top: -60px;
-  transition: 1000ms;
   transform: scale(0.3);
   cursor: pointer;
 }
@@ -94,11 +81,13 @@ body {
   position: absolute;
   margin-top: -50px;
   margin-left: -12px;
+  margin-top: -50px;
+  margin-left: -12px;
+  transition: 600ms;
   background-color: #f6f6f6;
 }
 .restaurants__content__icone__wrap__effect--colorB:hover {
   margin-top: -60px;
-  transition: 1000ms;
   transform: scale(0.3);
   cursor: pointer;
 }
@@ -198,10 +187,11 @@ a {
   z-index: 0;
   top: 0;
   left: 0;
-  transition: opacity 5s ease-in-out, visibility ease-in-out;
+  transition: opacity 6s ease-in-out, visibility ease-in-out;
   visibility: hidden;
   opacity: 0;
-  animation: opacity 3s ease-in;
+  filter: brightness(1.2);
+  animation: opacity 5s ease-in-out;
 }
 @keyframes opacity {
   0% {
@@ -209,7 +199,7 @@ a {
     z-index: 999;
     visibility: visible;
   }
-  50% {
+  90% {
     opacity: 1;
   }
   100% {
@@ -223,21 +213,17 @@ a {
   width: 100%;
   height: 50%;
   top: 0;
-  animation: opentop 3s ease-in;
+  animation: opentop 5s ease-in;
 }
 @keyframes opentop {
   0% {
     transform: translateY(0);
-    opacity: 1;
   }
-  50% {
+  70% {
     transform: translateY(0);
-    opacity: 1;
   }
   100% {
     transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
   }
 }
 .loader .container__bottom {
@@ -245,23 +231,19 @@ a {
   border-top: 2px solid black;
   position: absolute;
   width: 100%;
-  animation: openbottom 3s ease-in;
   height: 50%;
   top: 50%;
+  animation: openbottom 5s ease-in;
 }
 @keyframes openbottom {
   0% {
     transform: translateY(0);
-    opacity: 1;
   }
-  50% {
-    opacity: 1;
+  70% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(100%);
-    opacity: 0;
-    visibility: hidden;
   }
 }
 .loader .title__loader {
@@ -271,62 +253,52 @@ a {
   z-index: 2;
   filter: drop-shadow(4px -1px 2px white);
   animation: translate 500ms ease-in;
-  position: absolute;
 }
 @keyframes translate {
   0% {
     transform: translateY(0);
-    opacity: 0;
   }
   100% {
     transform: translateY(50%);
-    opacity: 1;
   }
 }
 .loader .circle__central {
   border: 5px solid black;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
-  filter: brightness(1.5);
   border-top: 5px solid #FF79DA;
   border-bottom: 5px solid #9356dc;
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  filter: brightness(1.5);
   animation: rotate 1s ease-in-out infinite;
-  top: 50%;
-  left: 50%;
 }
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
-    opacity: 0;
   }
   100% {
     transform: rotate(360deg);
-    opacity: 1;
   }
 }
 .loader .circle__exterieur {
   border: 10px solid #FF79DA;
-  box-shadow: 0px 5px 20px rgb(196, 196, 196);
-  filter: brightness(1.5);
   border-top: 10px solid black;
-  border-radius: 50%;
-  transform: rotate(45deg);
   border-radius: 50%;
   width: 150px;
   height: 150px;
   position: absolute;
+  box-shadow: 0px 5px 20px rgb(196, 196, 196);
+  transform: rotate(45deg);
+  filter: brightness(1.6);
   animation: rotatecircle 1s ease-in-out infinite;
 }
 @keyframes rotatecircle {
   0% {
     transform: rotate(0deg);
-    opacity: 0;
   }
   100% {
     transform: rotate(-360deg);
-    opacity: 1;
   }
 }
 
@@ -399,13 +371,13 @@ body {
   height: 70px;
   margin: 10px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
+  transition: box-shadow 600ms, background-color 600ms, color 600ms;
 }
 .btn:hover {
   cursor: pointer;
   color: #9356dc;
   background-color: #f5edff;
-  box-shadow: 0px 5px 20px rgb(145, 145, 145);
-  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgb(51, 51, 51);
 }
 .btn__form {
   background-color: #9356dc;
@@ -463,11 +435,11 @@ body {
   border-radius: 20px;
   box-shadow: 0px 5px 20px rgb(196, 196, 196);
   color: black;
-  transition: box-shadow 600ms;
+  transition: box-shadow 500ms;
 }
 .restaurants__cards__card:hover {
   cursor: pointer;
-  box-shadow: 0px 5px 20px rgb(145, 145, 145);
+  box-shadow: 0px 5px 10px rgb(51, 51, 51);
 }
 .restaurants__cards__card__image__wrap {
   position: relative;
@@ -642,7 +614,7 @@ body {
   animation-timing-function: linear;
 }
 .cards__card--1:hover, .cards__card--2:hover, .cards__card--3:hover, .cards__card--4:hover {
-  box-shadow: 0px 5px 20px rgb(145, 145, 145);
+  box-shadow: 0px 5px 10px rgb(51, 51, 51);
 }
 @keyframes translate {
   0% {
@@ -675,7 +647,7 @@ body {
   color: white;
   overflow: hidden;
   background-color: #99E2D0;
-  transition: width 600ms ease;
+  transition: width 500ms ease;
 }
 .cards__card__icone {
   padding: 26px;
@@ -687,9 +659,10 @@ body {
   width: 25%;
 }
 .cards__card:hover > .cards__card__progress span {
+  font-size: 1.3em;
   display: inline-block;
   transform: rotate(360deg);
-  transition: 600ms;
+  transition: 600ms ease-out;
 }
 .cards__card__texte {
   width: 90%;
