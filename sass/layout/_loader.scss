@@ -14,14 +14,12 @@
     z-index: 0;
     top: 0;
     left: 0;
-
     //property loader
     transition: opacity 6s ease-in-out, visibility ease-in-out;
     visibility: hidden;
     opacity: 0;
     filter: brightness(1.2);
     animation: opacity 5s ease-in-out ;
-    
 
     //animation loader
     @keyframes opacity{
@@ -49,7 +47,7 @@
     animation: opentop 5s ease-in ;
     }
 
-    //anim top
+    //anim top plane
     @keyframes opentop{
         0%{
             transform: translateY(0);
