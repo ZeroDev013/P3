@@ -316,6 +316,12 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
 /*LOCATION*/
 .location {
   width: 100%;
