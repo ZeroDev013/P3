@@ -55,6 +55,9 @@ ul {
 li {
     list-style-type: none;
 }
+li.footer__link__contact{
+    margin: 5px 0 5px 0;
+}
 a{
     color: $color;
     text-decoration: none;
