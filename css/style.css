@@ -51,14 +51,14 @@ body {
   margin-left: 0px;
 }
 .restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__map--colorA, .restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__map--colorB {
-  animation: scale 800ms;
+  animation: scale 500ms;
 }
 @keyframes scale {
   0% {
     transform: scale(1);
   }
   100% {
-    transform: scale(0);
+    transform: scale(0.3);
     margin-top: -60px;
     opacity: 1;
   }
@@ -70,11 +70,6 @@ body {
 }
 .restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__image {
   opacity: 1;
-}
-@keyframes opacity {
-  100% {
-    opacity: 0;
-  }
 }
 .restaurants__content__icone__wrap__map--colorA {
   width: 50px;
