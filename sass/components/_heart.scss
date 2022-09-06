@@ -18,15 +18,15 @@
         &:hover > &__map--colorA,  &:hover > &__map--colorB{
             
             //anim scale
-            animation: scale 500ms; 
+            animation: scale 500ms; //delai de l'effet synchronisé sur delai d'apparition de l'image
             @keyframes scale{
                 0%{
-                transform: scale(1);
-                opacity: 1;   
+                transform: scale(1);//valeur de plan au debut de l'animation
+                opacity: 1; //rend la map visible au survol
                 }
                 100%{
-                transform: scale(0.3);
-                margin-top: -60px;
+                transform: scale(0.3);//valeur de plan a la fin de l'animation
+                margin-top: -60px;//deplacement de plan 
                 opacity: 1;  
                 }
             }
@@ -34,19 +34,19 @@
         //etat de l'image avant le survol
         &__image{
             width: 100%;;
-            opacity: 0;
-            transition: 500ms ease;
+            opacity: 0; //cache l'image avant le survol
+            transition: 500ms ease; //delai d'apparition de l'image
         }
 
         //attribut les propriétés de hover sur l'element image
         &:hover > &__image{        
-            opacity: 1;        
+            opacity: 1;  //affiche l'image au survol      
         }
 
         //map white
         &__map--colorA{ 
         @include value-heart;
-        opacity: 0;
+        opacity: 0; //map non visible pour ne pas cacher le coeur uncolor
         background-color: white;     
         }
 
