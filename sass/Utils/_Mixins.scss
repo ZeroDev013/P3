@@ -1,11 +1,4 @@
 /*HEART*/
-@mixin hover-heart{
-    &:hover{  
-    margin-top: -60px;
-    transform: scale(.3);
-    cursor: pointer;
-    }
-}
 @mixin value-heart{
     width: 50px;
     height: 40px;

@@ -49,15 +49,33 @@ body {
   position: absolute;
   margin-top: -5px;
   margin-left: 0px;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
 }
-.restaurants__content__icone__wrap:hover {
-  opacity: 1;
+.restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__effect--colorA {
   cursor: pointer;
+  animation: scale 500ms;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    margin-top: -60px;
+    opacity: 1;
+  }
 }
 .restaurants__content__icone__wrap__image {
   width: 100%;
+  transition: 500ms;
+  opacity: 0;
+}
+.restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__image {
+  opacity: 1;
+}
+@keyframes opacity {
+  100% {
+    opacity: 0;
+  }
 }
 .restaurants__content__icone__wrap__effect--colorA {
   width: 50px;
@@ -68,12 +86,8 @@ body {
   margin-top: -50px;
   margin-left: -12px;
   transition: 600ms;
+  opacity: 0;
   background-color: white;
-}
-.restaurants__content__icone__wrap__effect--colorA:hover {
-  margin-top: -60px;
-  transform: scale(0.3);
-  cursor: pointer;
 }
 .restaurants__content__icone__wrap__effect--colorB {
   width: 50px;
@@ -84,12 +98,8 @@ body {
   margin-top: -50px;
   margin-left: -12px;
   transition: 600ms;
+  opacity: 0;
   background-color: #f6f6f6;
-}
-.restaurants__content__icone__wrap__effect--colorB:hover {
-  margin-top: -60px;
-  transform: scale(0.3);
-  cursor: pointer;
 }
 
 /*HEADER*/

@@ -1,3 +1,4 @@
+//conteneur global
 .restaurants__content__icone {
     display: flex;
     justify-content: center;
@@ -6,37 +7,56 @@
     .fa-heart{
         font-size: 1.5em;
     }
-
+    //conteneur 
     &__wrap {
     width: 25px;
     position: absolute;
     margin-top: -5px;
     margin-left: 0px;
-    opacity: 0;
-    transition: opacity 500ms ease-out;
-
-        &:hover{
-            opacity:1; 
+  
+        // hover sur wrap et plane avec animation scale
+        &:hover > &__effect--colorA{
             cursor: pointer;
+            animation: scale 500ms; //scale
+            @keyframes scale{
+                0%{
+                transform: scale(1);   
+                }
+                100%{
+                transform: scale(0);
+                margin-top: -60px;
+                opacity: 1;  
+                }
+            }
         }
-
         &__image{
-            width: 100%;
+            width: 100%;;
+            transition: 500ms;
+            opacity: 0;
         }
-        
-        //effet color progression heart white
+        // hover sur image avec anim opacity
+        &:hover > &__image{        
+            opacity: 1;
+     
+            //anim opacity
+            @keyframes opacity{
+                100%{
+                opacity: 0;
+                }
+            }         
+        }
+        //effet color progression white plane
         &__effect--colorA{ 
         @include value-heart;
-        @include hover-heart;
-        background-color: $color; 
+        opacity: 0;
+        background-color: white;     
         }
 
-        //effet color progression heart grey
+        //effet color progression heart grey plane
         &__effect--colorB{  
         @include value-heart;              
-        @include hover-heart;
+        opacity: 0;
         background-color: #f6f6f6;
         } 
-
     }
 }
