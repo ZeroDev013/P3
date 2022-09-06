@@ -14,6 +14,7 @@
 .main__menu{
     width: 100%;
     position: relative;
+    cursor: pointer;
 
     &__content {
     width: 100%;
@@ -94,7 +95,7 @@
         // Apparition des cards les unes apres les autres avec un délai décalé 
         $anim-delai: 200ms ; //base délai 
         @for $i from 1 through 4 { // répète 4 fois le bloc de code, a chaque itération change la valeur de $i
-            &--#{$i} { // incremente les elements de 1 a 4 
+            &--#{$i} { // incremente le delai de la valeur de $i
                 animation-delay: $anim-delai * $i; // incremente le delai en * la valeur de $i recuperé a chaque cycle 
             }
         }
@@ -119,7 +120,7 @@
             transition: 500ms;
         }
 
-        //deplacement du conteneur icone vers la gauche
+        //Apparition du conteneur icone valeur passe de 0 a 25%
         &:hover > &__progress { 
             width: 25%;
 
@@ -139,7 +140,7 @@
             justify-content: center;
             overflow: hidden;
 
-            &__title { /*h3*/
+            &__title { //h3
                 padding: 10px 10px 5px 10px;
                 margin: 0;
                 font-size: map-get($font-size-menu, menutitle);
