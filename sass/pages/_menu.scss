@@ -120,7 +120,7 @@
             transition: 500ms;
         }
 
-        //Apparition du conteneur icone width passe de 0 a 25%
+        //parent icone passe la valeur de la width de 0 a 25% avec son enfant 
         &:hover > &__progress { 
             width: 25%;
 

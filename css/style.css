@@ -56,6 +56,7 @@ body {
 @keyframes scale {
   0% {
     transform: scale(1);
+    opacity: 1;
   }
   100% {
     transform: scale(0.3);
@@ -66,7 +67,7 @@ body {
 .restaurants__content__icone__wrap__image {
   width: 100%;
   opacity: 0;
-  transition: 500ms;
+  transition: 500ms ease;
 }
 .restaurants__content__icone__wrap:hover > .restaurants__content__icone__wrap__image {
   opacity: 1;

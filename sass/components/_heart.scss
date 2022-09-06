@@ -14,14 +14,15 @@
     margin-top: -5px;
     margin-left: 0px;
 
-        // attribut les propriétés de hover sur chaque element map
+        //attribut l'animation scale au survol sur chaque map
         &:hover > &__map--colorA,  &:hover > &__map--colorB{
             
             //anim scale
             animation: scale 500ms; 
             @keyframes scale{
                 0%{
-                transform: scale(1);   
+                transform: scale(1);
+                opacity: 1;   
                 }
                 100%{
                 transform: scale(0.3);
@@ -30,14 +31,14 @@
                 }
             }
         }
-        //le coeur coloré n'est pas visible 
+        //etat de l'image avant le survol
         &__image{
             width: 100%;;
             opacity: 0;
-            transition: 500ms;
+            transition: 500ms ease;
         }
 
-        // attribut les propriétés de hover sur l'element image
+        //attribut les propriétés de hover sur l'element image
         &:hover > &__image{        
             opacity: 1;        
         }
